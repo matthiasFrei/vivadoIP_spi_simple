@@ -61,6 +61,9 @@ typedef enum SpiSimple_ErrCode
 //*******************************************************************************
 // Access Functions
 //*******************************************************************************
+// Note: For SPI transfers smaller 32 bit, always the lower N bits of txData are
+//       transmitted, independent whether MSB or LSB first is set in the
+//       Blockdesign.
 /**
  * Blocking TX only transaction (ignore RX data)
  *
